@@ -1,0 +1,113 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --dark-gray: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-body: "Montserrat", sans-serif;
+    --font-header: "Fraunces", serif;
+
+    --text-xl: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 90% 1fr;
+    place-items: center;
+    background: var(--cream);
+
+    article {
+        background: var(--white);
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 28px 16px;
+        font-family: var(--font-body);
+        font-weight: 500;
+
+        img {
+            max-width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        section {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 0.75rem;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                color: var(--dark-gray);
+                margin-bottom: 12px;
+            }
+
+            h2 {
+                font-family: var(--font-header);
+                font-weight: 700;
+                line-height: 1;
+                font-size: var(--text-xl);
+                text-transform: capitalize;
+                margin-bottom: 16px;
+                color: var(--dark-blue);
+            }
+
+            .about {
+                font-size: 0.875rem;
+                line-height: 1.75;
+                color: var(--dark-gray);
+                margin-bottom: 24px;
+
+                span {
+                    text-transform: uppercase;
+                }
+            }
+
+            .pricing {
+                display: flex;
+                align-items: center;
+                gap: 19px;
+                margin-bottom: 20px;
+
+                p {
+                    font-size: 0.813rem;
+                    color: var(--dark-gray);
+                }
+
+                .discount {
+                    font-size: var(--text-xl);
+                    font-family: var(--font-header);
+                    color: var(--dark-cyan);
+                    font-weight: 700;
+                    line-height: 1;
+                }
+            }
+
+            button {
+                background: var(--dark-cyan);
+                border: none;
+                border-radius: 8px;
+                padding: 15px;
+                color: var(--white);
+                font-size: 0.875rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+
+                &::before {
+                    content: url(../images/icon-cart.svg);
+                }
+            }
+        }
+    }
+}
